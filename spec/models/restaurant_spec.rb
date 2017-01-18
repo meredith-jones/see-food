@@ -12,8 +12,6 @@ RSpec.describe Restaurant, type: :model do
 
   describe "associations" do
     it { should have_many(:pictures) }
-    it { should have_many(:pictures) }
+    it { should have_many(:likes).through(:pictures) }
   end
-
-
 end
