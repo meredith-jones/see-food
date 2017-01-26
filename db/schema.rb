@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170118052446) do
+ActiveRecord::Schema.define(version: 20170126223531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,16 +29,23 @@ ActiveRecord::Schema.define(version: 20170118052446) do
     t.integer  "restaurant_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "user_id"
     t.index ["restaurant_id"], name: "index_pictures_on_restaurant_id", using: :btree
+    t.index ["user_id"], name: "index_pictures_on_user_id", using: :btree
   end
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
-    t.string   "address"
     t.string   "phone_number"
-    t.string   "website"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "zip_code"
+    t.string   "city"
+    t.string   "state"
+    t.decimal  "longitude",    precision: 15, scale: 13
+    t.decimal  "latitude",     precision: 15, scale: 13
   end
 
   create_table "users", force: :cascade do |t|
@@ -72,4 +79,5 @@ ActiveRecord::Schema.define(version: 20170118052446) do
   add_foreign_key "likes", "pictures"
   add_foreign_key "likes", "users"
   add_foreign_key "pictures", "restaurants"
+  add_foreign_key "pictures", "users"
 end
