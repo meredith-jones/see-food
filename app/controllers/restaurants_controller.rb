@@ -5,6 +5,7 @@ class RestaurantsController < ApplicationController
   end
 
   def index
+
   end
 
   def create
@@ -15,6 +16,5 @@ class RestaurantsController < ApplicationController
 
   def destroy
   end
-
 
 end
