@@ -51,9 +51,9 @@ gem 'awesome_print'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'rb-readline'
+gem 'httparty'
 
 
 # gem 'google_places'
 # gem 'dotenv-rails'
 # gem 'yelp'
-# gem 'httparty'
