@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-# RSpec.describe RestaurantsController, type: :controller do
-#
+RSpec.describe RestaurantsController, type: :controller do
+
 # let(:restaurants) { search_by_zip("94030") }
 #
 #
@@ -14,4 +14,4 @@ require 'rails_helper'
 # end
 
 
-# end
+end
