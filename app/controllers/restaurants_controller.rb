@@ -5,7 +5,7 @@ class RestaurantsController < ApplicationController
   end
 
   def index
-
+    restaurants = search_by_zip("94552")
   end
 
   def create
