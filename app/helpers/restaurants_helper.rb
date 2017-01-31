@@ -33,16 +33,16 @@ module RestaurantsHelper
   def parse_restaurant_info(restaurants_json)
     restaurants = restaurants_json['businesses'].map do | restaurant |
       {
-        "name": restaurant['name'],
-        "image_url": restaurant['image_url'],
-        "phone_number": restaurant['phone'],
-        "address1": restaurant['location']['address1'],
-        "address2": restaurant['location']['address2'],
-        "city": restaurant['location']['city'],
-        "state": restaurant['location']['state'],
-        "zip_code": restaurant['location']['zip_code'],
-        "longitude": restaurant['coordinates']['longitude'],
-        "latitude": restaurant['coordinates']['latitude']
+        "name" => restaurant['name'],
+        "image_url" => restaurant['image_url'],
+        "phone_number" => restaurant['phone'],
+        "address1" => restaurant['location']['address1'],
+        "address2" => restaurant['location']['address2'],
+        "city" => restaurant['location']['city'],
+        "state" => restaurant['location']['state'],
+        "zip_code" => restaurant['location']['zip_code'],
+        "longitude" => restaurant['coordinates']['longitude'],
+        "latitude" => restaurant['coordinates']['latitude']
       }
     end
   end
