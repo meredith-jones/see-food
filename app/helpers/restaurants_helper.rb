@@ -5,7 +5,10 @@ module RestaurantsHelper
     headers = { "Authorization" => "Bearer #{ENV['YELP_ACCESS_TOKEN']}" }
     query = {
       "latitude" => latitude,
-      "longitude" => longitude
+      "longitude" => longitude,
+      "categories" => "restaurants",
+      "open_now" => true,
+      "limit" => 50
     }
 
     response = HTTParty.get(
@@ -19,7 +22,10 @@ module RestaurantsHelper
   def search_by_zip(zip_code)
     headers = { "Authorization" => "Bearer #{ENV['YELP_ACCESS_TOKEN']}" }
     query = {
-      "location" => zip_code
+      "location" => zip_code,
+      "categories" => "restaurants",
+      "open_now" => true,
+      "limit" => 50
     }
 
     response = HTTParty.get(
