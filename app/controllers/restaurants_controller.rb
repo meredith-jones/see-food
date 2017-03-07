@@ -2,7 +2,7 @@ class RestaurantsController < ApplicationController
   include RestaurantsHelper
 
   def index
-    restaurants = search_by_zip("94552")
+    @restaurants = search_by_zip("94552")
   end
 
   def show
