@@ -55,5 +55,5 @@ gem 'httparty'
 
 
 # gem 'google_places'
-# gem 'dotenv-rails'
+gem 'dotenv-rails'
 # gem 'yelp'
