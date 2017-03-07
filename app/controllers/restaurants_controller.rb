@@ -1,11 +1,11 @@
 class RestaurantsController < ApplicationController
   include RestaurantsHelper
 
-  def show
-  end
-
   def index
     restaurants = search_by_zip("94552")
+  end
+
+  def show
   end
 
   def create
