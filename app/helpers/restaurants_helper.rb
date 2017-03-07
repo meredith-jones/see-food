@@ -8,7 +8,7 @@ module RestaurantsHelper
       "longitude" => longitude,
       "categories" => "restaurants",
       "open_now" => true,
-      "limit" => 50
+      "limit" => 10
     }
 
     response = HTTParty.get(
@@ -20,12 +20,13 @@ module RestaurantsHelper
   end
 
   def search_by_zip(zip_code)
-    headers = { "Authorization" => "Bearer #{ENV['YELP_ACCESS_TOKEN']}" }
+    headers = { "Authorization" => "Bearer #{ ENV['YELP_ACCESS_TOKEN']}" }
+
     query = {
       "location" => zip_code,
       "categories" => "restaurants",
       "open_now" => true,
-      "limit" => 50
+      "limit" => 10
     }
 
     response = HTTParty.get(
@@ -52,5 +53,4 @@ module RestaurantsHelper
       }
     end
   end
-
 end

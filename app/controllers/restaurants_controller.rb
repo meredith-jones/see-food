@@ -1,3 +1,5 @@
+require 'restaurants_helper'
+
 class RestaurantsController < ApplicationController
   include RestaurantsHelper
 
