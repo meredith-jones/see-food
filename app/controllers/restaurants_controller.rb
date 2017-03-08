@@ -5,6 +5,7 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = search_by_zip("94552")
+    json_response(@restaurants)
   end
 
   def show
