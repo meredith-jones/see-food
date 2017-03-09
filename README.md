@@ -14,7 +14,7 @@ Backend for seeFood app
     bundle exec rspec
 
 ## Deployed to Heroku
-[Taco API](https://taco-api.herokuapp.com/tacos)
+[SeeFood API](https://see-food-api.herokuapp.com/restaurants)
 
 ## Documentation
 
